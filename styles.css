@@ -147,3 +147,7 @@ section.band.deep .kicker { color: #a9c8ba; }
   .step-grid, .card-grid { grid-template-columns: 1fr; }
   section.band { padding: 56px 0; }
 }
+
+@media (max-width: 640px) {
+  .site-nav a:not(.button) { display: none; }
+}
