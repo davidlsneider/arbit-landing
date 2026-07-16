@@ -214,3 +214,72 @@ section.band.deep .kicker { color: #a9c8ba; }
 @media (max-width: 640px) {
   .site-nav a:not(.button) { display: none; }
 }
+
+/* Worked example & decision record */
+.page-title { font-size: clamp(34px, 5.4vw, 56px); }
+
+.sample-tag {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; color: #6e8178;
+  text-transform: uppercase; display: block; margin-bottom: 16px;
+}
+.record-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 10px;
+  padding: 26px; box-shadow: 0 24px 60px -36px rgba(10, 45, 34, 0.45);
+}
+section.band.deep .record-card { color: var(--ink); }
+section.band.deep .record-card p { color: var(--ink-soft); }
+section.band.deep .record-card h3 { color: #4b7c66; }
+section.band.deep .record-card .record-quote { color: var(--ink); }
+.record-card h3 { font-family: var(--mono); font-size: 11px; font-weight: 650; letter-spacing: 0.12em; text-transform: uppercase; color: #4b7c66; margin: 18px 0 6px; }
+.record-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding-bottom: 12px; border-bottom: 1px solid var(--line);
+}
+.record-title { font-family: Georgia, "Times New Roman", serif; font-size: 19px; letter-spacing: -0.02em; }
+.pill {
+  font-family: var(--mono); font-size: 10px; font-weight: 650; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 10px; border-radius: 999px; background: var(--mint); color: var(--forest);
+  border: 1px solid #bcd9ab; white-space: nowrap;
+}
+.record-quote {
+  font-family: Georgia, "Times New Roman", serif; font-size: 15px; line-height: 1.55; color: var(--ink);
+  border-left: 3px solid #69a951; padding-left: 14px; margin: 14px 0;
+}
+.remedy-row {
+  display: flex; justify-content: space-between; gap: 12px; padding: 11px 14px; margin-top: 8px;
+  border-radius: 6px; background: var(--mint); border: 1px solid #bcd9ab; font-size: 14px;
+}
+.remedy-row strong { font-weight: 700; }
+.remedy-row.muted { background: transparent; border-color: var(--line); color: var(--ink-soft); }
+.sig {
+  font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 13.5px; color: var(--ink-soft);
+  margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line);
+}
+.record-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 4px 0 6px; padding: 0; list-style: none; }
+.record-meta li { display: flex; justify-content: space-between; gap: 14px; font-size: 13px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
+.record-meta span { color: var(--ink-soft); }
+.record-meta strong { font-weight: 650; text-align: right; }
+.findings { list-style: none; counter-reset: f; padding: 0; margin: 6px 0 0; display: grid; gap: 12px; }
+.findings li { counter-increment: f; display: grid; grid-template-columns: 30px 1fr; gap: 12px; font-size: 14px; color: var(--ink-soft); }
+.findings li::before { content: counter(f, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: #4b7c66; padding-top: 3px; }
+
+.timeline { list-style: none; padding: 0; margin: 30px 0 0; }
+.timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; color: var(--ink-soft); }
+.timeline .date { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.04em; color: #4b7c66; padding-top: 3px; white-space: nowrap; }
+
+.terms-list { list-style: none; counter-reset: t; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 26px; }
+.terms-list li { counter-increment: t; background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 18px; font-size: 13.5px; color: var(--ink-soft); }
+.terms-list li::before { content: counter(t, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: #4b7c66; display: block; margin-bottom: 8px; }
+.terms-list strong { display: block; color: var(--ink); margin-bottom: 4px; font-size: 14px; }
+
+.direction-quote {
+  background: var(--paper); border-left: 3px solid #69a951; border-radius: 0 6px 6px 0;
+  padding: 16px 20px; margin: 22px 0 0;
+  font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; line-height: 1.55; color: var(--ink);
+}
+.alt .direction-quote { background: var(--white); }
+
+@media (max-width: 860px) {
+  .terms-list, .record-meta { grid-template-columns: 1fr; }
+  .timeline li { grid-template-columns: 96px 1fr; }
+}
