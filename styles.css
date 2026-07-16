@@ -218,6 +218,9 @@ section.band.deep .kicker { color: #a9c8ba; }
 /* Worked example & decision record */
 .page-title { font-size: clamp(34px, 5.4vw, 56px); }
 
+.fact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+.fact-grid .card p { font-size: 13.5px; }
+
 .sample-tag {
   font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; color: #6e8178;
   text-transform: uppercase; display: block; margin-bottom: 16px;
@@ -282,4 +285,9 @@ section.band.deep .record-card .record-quote { color: var(--ink); }
 @media (max-width: 860px) {
   .terms-list, .record-meta { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 96px 1fr; }
+  .fact-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .fact-grid { grid-template-columns: 1fr; }
 }
